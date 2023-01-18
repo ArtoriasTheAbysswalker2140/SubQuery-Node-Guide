@@ -1,8 +1,6 @@
 # SubQuery-Node-Guide
 
 #!/bin/bash  
-# wget -q -O subquery.sh https://api.nodes.guru/subquery.sh && chmod +x subquery.sh && sudo /bin/bash subquery.sh  
-  
   
 exists()  
 {  
@@ -16,9 +14,7 @@ fi
 bash_profile=$HOME/.bash_profile  
 if [ -f "$bash_profile" ]; then  
     . $HOME/.bash_profile  
-fi  
-sleep 1 && curl -s https://api.nodes.guru/logo.sh | bash && sleep 3  
-  
+fi    
 function setupSwap {  
 	echo -e '\n\e[42mSet up swapfile\e[0m\n'  
 	curl -s https://api.nodes.guru/swap4.sh | bash  
