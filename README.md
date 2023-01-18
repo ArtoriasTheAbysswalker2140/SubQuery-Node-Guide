@@ -62,3 +62,23 @@ installNodeJS
 installDocker  
 installDockerCompose  
 installSoftware  
+
+cd $HOME  
+subql init --starter hello-world  
+cd hello-world  
+yarn install  
+yarn codegen  
+yarn build  
+docker-compose pull  
+docker-compose up -d  
+echo "http://"$(curl -s ifconfig.me)":3000"  
+  query {  
+    starterEntities(first: 10) {  
+      nodes {  
+        field1  
+      }  
+    }  
+  }  
+}  
+cd $HOME/hello-world  
+docker-compose stop  
